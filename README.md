@@ -1,5 +1,7 @@
 mod_cdr_mysql
 =============
+Modified to write SQL local file that really works for all conditions if database connection fails so we do not loose any revenue because
+of lost data.
 
 FreeSWITCH Module CDR MYSQL
 
