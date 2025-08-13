@@ -389,7 +389,11 @@ static switch_status_t my_on_reporting(switch_core_session_t *session)
 			offset += len;
 		}
 
-		*(values + --offset) = '\0';
+
+		/* FIXED CODE */
+		if (offset > 0) {
+    			*(values + --offset) = '\0';
+		}
 
 		/* INSERT the cdr into the database */
 		insert_cdr(values);
@@ -432,7 +436,10 @@ static switch_status_t my_on_reporting(switch_core_session_t *session)
 			offset += len;
 		}
 
-		*(values + --offset) = '\0';
+		/* FIXED CODE */
+		if (offset > 0) {
+    			*(values + --offset) = '\0';
+		}
 
 		/* INSERT the cdr into the database */
 		insert_cdr(values);
